@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Routes } from '@angular/router';
+
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'universityApp';
+  title = 'University Internal Application';
 }
