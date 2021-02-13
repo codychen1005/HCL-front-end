@@ -22,8 +22,8 @@ export class UniversityComponent implements OnInit {
     this.id = this.route.snapshot.params['id'];
 
     this.university = new University();
-    this.dataService.getUniversityById(this.id).subscribe( data => {
-      this.university = data;
-    })
+    // this.dataService.getUniversityById(this.id).subscribe( data => {
+    //   this.university = data;
+    // })
   }
 }

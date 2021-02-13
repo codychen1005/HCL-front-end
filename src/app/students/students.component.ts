@@ -14,7 +14,7 @@ export class StudentsComponent implements OnInit {
   constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
-    this.students = this.dataService.students;
+    // this.students = this.dataService.students;
   }
 
 }
