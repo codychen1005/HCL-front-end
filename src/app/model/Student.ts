@@ -1,8 +1,9 @@
+import { University } from "./University";
+
 export class Student
 {
+  degree: string;
   id:number;
-  unid:number;
   name:string;
-  gradYear: number;
-  university_id: number;
+  university: University;
 }

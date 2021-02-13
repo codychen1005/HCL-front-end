@@ -140,13 +140,14 @@ export class DataService {
   //   return this.httpClient.post(`${this.baseURL}`, university);
   // }
 
-  // getUniversityById(id: number): Observable<University>{
-  //   return this.httpClient.get<University>(`${this.baseURL}/${id}`);
-  // }
+  getUniversityById(id: number): Observable<Array<Student>>{
+    return this.httpClient.get<Array<Student>>(`${this.baseURL}/${id}`);
+  }
+
 
   // updateUniversity(id: number, university: University): Observable<Object>{
   //   return this.httpClient.put(`${this.baseURL}/${id}`, university);
-  // }
+  // }n
 
   // deleteUniversity(id: number): Observable<Object>{
   //   return this.httpClient.delete(`${this.baseURL}/${id}`);

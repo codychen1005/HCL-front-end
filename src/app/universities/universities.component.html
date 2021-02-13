@@ -6,11 +6,12 @@
   <a class="btn btn-warning mb-3">Add University</a>
   <a class="btn btn-warning mb-3">Delete Univeristy</a>
 
-
   <div class="card my-5">
     <div class="card-body">
       <table class="table table-bordered table-striped">
         <thead class="thead-dark">
+          <script src = 'universities.component.ts'></script>
+
           <tr>
             <th scope="col">ID</th>
             <th scope="col">Name</th>
@@ -22,7 +23,7 @@
             <td>{{ university.id }}</td>
             <td>{{ university.name }}</td>
             <td>
-              <button type="button" class="btn btn-primary" (click) = "setUniversity(university.id)">View Detail </button>
+              <button (click) = "universityDetails(university.id)" type="button" class="btn btn-primary">View Detail </button> <!--university/university.id-->
             </td>
           </tr>
         </tbody>

@@ -13,28 +13,39 @@ export class UniversitiesComponent implements OnInit {
 
   universities: Array<University>;
   selectedUniversity: University;
-  
+
   constructor(private dataService: DataService,
-              private router: Router) { }
+              private router: Router) {
+
+               }
 
   ngOnInit(): void {
     this.getUniversities();
   }
 
-  private getUniversities()
+  private getUniversities() // this gets the date from the backend
   {
     this.dataService.getUniversity().subscribe(data => {
+      console.log(data);
       this.universities = data;
     });
   }
 
   universityDetails(id: number){
-    this.router.navigate(['employee-details', id]);
+    console.log(id)
+    this.router.navigate(['university', id]); // university/1
+  }
+
+  GetUniversity(id: number)
+  {
+    this.dataService.getUniversityById(id).subscribe(
+    )
   }
 
   updateUniversity(id: number){
     this.router.navigate(['update-employee', id]);
   }
+
 
   // deleteUniversity(id: number){
   //   this.dataService.deleteUniversity(id).subscribe( data => {

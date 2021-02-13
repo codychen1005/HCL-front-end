@@ -14,16 +14,19 @@ export class UniversityComponent implements OnInit {
   id: number;
   name: string;
   students: Array<Student>;
-  university: University;
+  student: Student;
 
   constructor(private route: ActivatedRoute, private dataService: DataService) { }
 
   ngOnInit(): void {
     this.id = this.route.snapshot.params['id'];
 
-    this.university = new University();
-    // this.dataService.getUniversityById(this.id).subscribe( data => {
-    //   this.university = data;
-    // })
+    this.student = new Student();
+    this.students = new Array <Student>();
+    this.dataService.getUniversityById(this.id).subscribe( data => {
+      console.log(data);
+      this.students = data;
+      console.log(this.student.degree);
+     })
   }
 }
